@@ -9,40 +9,65 @@
 </head>
 
 <body>
-    <div class="box">
-      <div class="title">Flight Number Generator</div>
-      <div class="subtitle">Choose a style and generate a random flight number!</div>
-           <input type="text" class="placeholder" name="" placeholder="Flight Number" id="flightnumberBox" readonly>
-           <div class="selection">
-            <div class="radio">
-            <input id="style0" type="radio" name="style" checked>
-            <label for="style0">OPR 1A</label>
-           </div>
-          <div class="radio">
-            <input id="style1" type="radio" name="style">
-            <label for="style1">OPR 1AB</label>
-          </div>
-          <div class="radio">
-            <input id="style2" type="radio" name="style">
-            <label for="style2">OPR 12A</label>
-          </div>
-          <div class="radio">
-            <input id="style3" type="radio" name="style">
-            <label for="style3">OPR 12AB</label>
-          </div>
-          <div class="radio">
-            <input id="style4" type="radio" name="style">
-            <label for="style4">OPR 123A</label>
-          </div>
-          <div class="radio">
-            <input id="style5" type="radio" name="style">
-            <label for="style5">OPR 1234</label>
-          </div>
-          </div>
-          <button class="generate" onclick="generateFN()">Generate</button>
+
+    <section class="container">
+      <div class="inner_container">
+        <div class="title">Callsign Generator</div>
+        <div class="subtitle">Choose a style and generate a random flight number!</div>
+        <input type="text" class="placeholder" name="" placeholder="Flight Number" id="flightnumberBox" readonly>
+        
+        <form action="">
+            
+              <input id="style0" type="radio" name="style" class="hidden" checked>
+              <label for="style0" class="radio_label">
+                <div class="radio_box">
+                  <div class="fnstyle">OPR 1A</div>
+                </div>
+              </label>
+            
+              <input id="style1" type="radio" name="style" class="hidden">
+              <label for="style1" class="radio_label">
+                <div class="radio_box">
+                  <div class="fnstyle">OPR 1AB</div>
+                </div>
+              </label>
+
+              <input id="style2" type="radio" name="style" class="hidden">
+              <label for="style2" class="radio_label">
+                <div class="radio_box">
+                  <div class="fnstyle">OPR 12A</div>
+                </div>
+              </label>
+
+              <input id="style3" type="radio" name="style" class="hidden">
+              <label for="style3" class="radio_label">
+                <div class="radio_box">
+                  <div class="fnstyle">OPR 12AB</div>
+                </div>
+              </label>
+
+              <input id="style4" type="radio" name="style" class="hidden">
+              <label for="style4" class="radio_label">
+                <div class="radio_box">
+                  <div class="fnstyle">OPR 123A</div>
+                </div>
+              </label>
+              
+              <input id="style5" type="radio" name="style" class="hidden">
+              <label for="style5" class="radio_label">
+                <div class="radio_box">
+                  <div class="fnstyle">OPR 1234</div>
+                </div>
+              </label>
+
+        </form>
+
+        <button class="generate" onclick="generateFN()">Generate</button>
+
         </div>
+    </section>
   
 
   <script src="script.js"></script>
    
-    </body>
+</body>

@@ -1,33 +1,39 @@
 * {
-  margin: 0;
-  padding: 0;
   user-select: none;
   box-sizing: border-box;
   touch-action: none;
-
-  
 }
 
-body {
-  align-items: center;
-  background-color: #081346;
-  display:flex;
-  justify-content: center;
+body, html {
+  margin: 0;
+  padding: 0;
+  height: -webkit-fill-available;
+}
+
+.container {
+  width: 100vw;
   height: 100vh;
-  overflow: hidden;
-  
+  background-color: #051350;
+  display: grid;
+  place-items: center;
+  height: -webkit-fill-available;
 }
 
-.box {
-  background-color: #122474;
+.inner_container {
+  max-width: 340px;
+  width: 100%;
+  background-color: rgb(0, 153, 255);
   border-radius: 20px;
-  box-sizing: border-box;
-  margin-bottom:auto;
-  margin-top: 5em;
-  height: 500px;
   padding: 20px;
-  width: 360px;
-  overflow: hidden;
+  position: relative;
+  font-family: sans-serif;
+}
+
+.inner_container form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  margin-bottom: 10px;
 }
 
 .title {
@@ -35,76 +41,71 @@ body {
   font-family: sans-serif;
   font-size: 34px;
   font-weight: 600;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   text-align: left;
 }
 
 .subtitle {
   color: #eeeeee;
   font-family: sans-serif;
-  font-size: 16px;
+  font-size: 12px;
   font-weight: 300;
   margin-top: 10px;
   margin-bottom: 20px;
 }
 
-.input {
-  background-color: #303245;
-  border-radius: 12px;
-  border: 0;
-  box-sizing: border-box;
-  color: #eee;
-  font-size: 18px;
-  height: 100%;
-  outline: 2px;
-  padding: 6px 20px 0;
-  width: 100%;
-  }
 
 .placeholder {
   margin-top: 10px;
+  margin-bottom: 30px;
   width: 100%;
   padding: 7px;
   font-size: 20px;
+  border: none;
+  border-radius: 5px;
   }
 
-.selection {
-  margin-top: 20px;
-  height: 185px;
-  -webkit-column-count: 2;
-  -moz-column-count: 2;
-  column-count: 2;
-  position: relative;
+
+.hidden {
+  display: none;
 }
 
-.radio{
-  display:inline-block;
-  padding: 5px;
+.radio_label {
   text-align: center;
-  justify-content:space-between;
-  margin: 10px 0;
-  margin-left: 0px;
-  margin-right: 0px;
+  padding: 10px;
+  border: 2px solid #ffffff71;
+  cursor: pointer;
   font-family: sans-serif;
-  color: #ffffff;
-  font-size:18px;
-  }
+  transition: all 0.1s ease-in;
+}
+
+.radio_box .fnstyle {
+  font-weight: 500;
+  padding: 5px;
+  letter-spacing: 0.5px;
+  color: #eeeeee;
+}
+
+input[type=radio]:checked + .radio_label{
+  border-color: #051350;
+}
 
 .generate {
-  background-color: rgb(255, 255, 255);
+  background-color: #051350;
   display: inline-block;
   position: relative;
   bottom: 0;
   border-radius: 5px;
   border: 0;
-  color: #0d1a52;
+  color: #eeeeee;
   font-weight: 500;
   cursor: pointer;
   font-size: 18px;
   height: 40px;
   width: 100%;
   vertical-align: bottom;
-  margin-bottom: 40px;
+  margin-bottom: 0;
+  margin-top: 20px;
   }
   
 .generate:active {
