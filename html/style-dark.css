@@ -1,0 +1,126 @@
+* {
+    user-select: none;
+    box-sizing: border-box;
+    touch-action: none;
+    font-family: "Ubuntu", sans-serif;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: -webkit-fill-available;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background-color: #000000;
+    display: grid;
+    place-items: center;
+    height: -webkit-fill-available;
+}
+
+.inner_container {
+    max-width: 340px;
+    width: 100%;
+    background-color: #212121;
+    border-radius: 20px;
+    padding: 20px;
+    position: relative;
+}
+
+.inner_container form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    margin-bottom: 0px;
+}
+
+.title {
+    color: #f6f4f2;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-size: 34px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.subtitle {
+    color: #f6f4f2;
+    font-size: 14px;
+    font-weight: 300;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.placeholder {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    height: 40px;
+    width: 100%;
+    padding-left: 20px;
+    font-size: 20px;
+    letter-spacing: 0.7px;
+    border: 2px solid #f6f4f2;
+    background-color: #f6f4f2;
+    border-radius: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+.radio_label {
+    text-align: center;
+    padding: 12px;
+    border-radius: 5px;
+    border: 0;
+    background-color: #424242;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+}
+
+.radio_box .fnstyle {
+    color: #f6f4f2;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 0px;
+    letter-spacing: 0.3px;
+}
+
+input[type="radio"]:checked + .radio_label {
+    background-color: #b8b8b8;
+}
+
+input[type="radio"]:checked + .radio_label .radio_box .fnstyle {
+    color: #1e5dd2;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 0px;
+    letter-spacing: 0.3px;
+}
+
+.generate {
+    background-color: #1e5dd2;
+    display: inline-block;
+    position: relative;
+    bottom: 0;
+    border-radius: 20px;
+    border: 0;
+    padding-bottom: 0;
+    color: #ffffff;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    cursor: pointer;
+    font-size: 20px;
+    height: 40px;
+    width: 60%;
+    margin-bottom: 0px;
+    margin-top: 30px;
+    margin-left: 20%;
+}
+
+.generate:active {
+    background-color: #164499;
+}
